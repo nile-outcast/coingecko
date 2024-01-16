@@ -1,3 +1,20 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["@stylistic/js"],
+
+  "rules": {
+    "@stylistic/js/padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": ["return", "block-like", "throw", "if", "default", "case", "break"],
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": ["block-like", "throw", "if"]
+      }
+    ]
+  }
 }
