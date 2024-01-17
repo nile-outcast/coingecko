@@ -1,6 +1,6 @@
 {
   "extends": "next/core-web-vitals",
-  "plugins": ["@stylistic/js"],
+  "plugins": ["@typescript-eslint", "@stylistic/js"],
 
   "rules": {
     "@stylistic/js/padding-line-between-statements": [
@@ -15,6 +15,8 @@
         "next": "*",
         "prev": ["block-like", "throw", "if"]
       }
-    ]
+    ],
+
+    "@typescript-eslint/consistent-type-imports": "error"
   }
 }
