@@ -1,0 +1,29 @@
+.footer {
+  background-color: white;
+  border-top: 1px solid lightgrey;
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.content > p {
+  color: var(--text-secondary);
+}
+
+.icon_list {
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
