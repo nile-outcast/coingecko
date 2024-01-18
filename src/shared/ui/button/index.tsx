@@ -8,7 +8,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const Button = ({ className, children, color = 'primary', ...props }: ButtonProps) => {
   return (
-    <button className={cn(styles.btn, styles[`btn-${color}`], className)} {...props}>
+    <button className={cn(styles.btn, styles[`btn_${color}`], className)} {...props}>
       {children}
     </button>
   )

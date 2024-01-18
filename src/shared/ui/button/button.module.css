@@ -7,11 +7,11 @@
   border: none;
 }
 
-.btn-negative {
+.btn_negative {
   background-color: var(--negative);
 }
 
-.btn-primary {
+.btn_primary {
   background-color: var(--primary);
 }
 

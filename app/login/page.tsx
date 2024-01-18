@@ -1,5 +1,10 @@
+import { ContentLayout } from 'src/shared/ui/layout'
 import { AuthForm } from 'src/widgets/auth'
 
 export default function Login() {
-  return <AuthForm />
+  return (
+    <ContentLayout>
+      <AuthForm />
+    </ContentLayout>
+  )
 }

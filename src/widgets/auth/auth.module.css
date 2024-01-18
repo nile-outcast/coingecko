@@ -7,7 +7,6 @@
   min-height: 100%;
   max-width: 520px;
   margin: auto;
-  padding: 40px;
 }
 
 .form > * {
@@ -16,10 +15,4 @@
 
 .form > :last-child {
   margin-top: 24px;
-}
-
-@media (max-width: 640px) {
-  .form {
-    padding: 24px;
-  }
 }
