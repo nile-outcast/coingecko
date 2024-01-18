@@ -1,0 +1,20 @@
+.btn {
+  padding: 16px 64px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  border: none;
+}
+
+.btn-negative {
+  background-color: var(--negative);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+}

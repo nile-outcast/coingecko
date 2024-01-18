@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  min-height: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 40px;
+}
+
+.form > * {
+  width: 100%;
+}
+
+.form > :last-child {
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .form {
+    padding: 24px;
+  }
+}
