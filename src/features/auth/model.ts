@@ -2,7 +2,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { StorageKeys } from 'src/shared/constants'
 import { z } from 'zod'
 import { signIn } from './api'
 import type { TAuthForm } from './types'
@@ -47,7 +46,6 @@ export const useAuthForm = () => {
       if (res.type == 'error') {
         formFields.forEach((field) => setError(field, { message: res.error }))
       } else {
-        document.cookie = `${StorageKeys.TOKEN}`
         replace('/')
       }
     } finally {
