@@ -1,0 +1,47 @@
+.card {
+  border: 2px solid transparent;
+  cursor: pointer;
+  background-color: white;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  scale: 1.07;
+  transition: scale 0.3s;
+}
+
+.card_title {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.symbol {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.price_change {
+  position: relative;
+  top: -0.3em;
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.price_change_positive {
+  color: var(--positive);
+}
+
+.price_change_negative {
+  color: var(--negative);
+}

@@ -1,0 +1,9 @@
+.info_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
