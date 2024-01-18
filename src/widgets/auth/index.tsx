@@ -1,7 +1,7 @@
 'use client'
+import { useAuthForm } from 'src/features/auth'
+import { Button } from 'src/shared/ui/button'
 import { Input } from 'src/shared/ui/input'
-import { useAuthForm } from '../../features/auth/model'
-import { Button } from '../../shared/ui/button'
 import styles from './auth.module.css'
 
 export const AuthForm = () => {

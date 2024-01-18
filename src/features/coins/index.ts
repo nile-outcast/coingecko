@@ -1,0 +1,1 @@
+export { useGetCoins } from './model'

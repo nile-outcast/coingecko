@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import Image from 'next/image'
 import type { Coin } from 'src/features/coins/types'
-import { formatPrice } from 'src/shared/libs/formatPrice'
+import { formatPrice } from 'src/shared/libs'
 import { InfoRow } from '../infoRow'
 import styles from './coinCard.module.css'
 

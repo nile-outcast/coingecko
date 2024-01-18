@@ -1,6 +1,6 @@
-import { ContentLayout } from 'src/shared/ui/layout'
-import { Navigation } from '../navigation'
+import { ContentLayout } from 'src/shared/ui'
 import styles from './header.module.css'
+import { Navigation } from './ui/navigation'
 
 export const Header = () => {
   return (

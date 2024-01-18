@@ -2,18 +2,8 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { navLinks } from './constants'
 import styles from './navigation.module.css'
-
-const navLinks = [
-  {
-    label: 'Home',
-    href: '/',
-  },
-  {
-    label: 'Profile',
-    href: '/profile',
-  },
-]
 
 export const Navigation = () => {
   const pathname = usePathname()
