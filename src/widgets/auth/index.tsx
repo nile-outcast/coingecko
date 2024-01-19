@@ -11,6 +11,7 @@ export const AuthForm = () => {
     <form className={styles.form} onSubmit={onSubmit}>
       <Input
         {...register('email')}
+        className={errors.email?.message && styles.form_input_error}
         label="Email"
         disabled={loading}
         type="text"
@@ -19,6 +20,7 @@ export const AuthForm = () => {
 
       <Input
         {...register('password')}
+        className={errors.password?.message && styles.form_input_error}
         label="Password"
         disabled={loading}
         type="password"

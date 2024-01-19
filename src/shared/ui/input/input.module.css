@@ -12,13 +12,13 @@
   color: var(--text-primary);
 }
 
-.input[aria-invalid='true'] {
-  border-color: var(--negative);
-}
-
 .input:focus-visible {
   outline: none;
   border-color: var(--primary);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--negative);
 }
 
 .input:disabled {
