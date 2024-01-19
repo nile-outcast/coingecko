@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import useSWRMutation from 'swr/mutation'
 import { z } from 'zod'
 import { signIn } from './api'
 import type { TAuthForm } from './types'
@@ -22,8 +22,6 @@ const AuthScheme = z.object({
 export const useAuthForm = () => {
   const { replace } = useRouter()
 
-  const [loading, setLoading] = useState(false)
-
   const {
     register,
     handleSubmit,
@@ -37,21 +35,17 @@ export const useAuthForm = () => {
     resolver: zodResolver(AuthScheme),
   })
 
-  const onSingIn = async (data: TAuthForm) => {
-    try {
-      setLoading(true)
-
-      const res = await signIn(data)
-
+  const { trigger, isMutating } = useSWRMutation('/api/login', signIn, {
+    onSuccess: (res) => {
       if (res.type == 'error') {
         formFields.forEach((field) => setError(field, { message: res.error }))
       } else {
         replace('/')
       }
-    } finally {
-      setLoading(false)
-    }
-  }
+    },
+  })
 
-  return { errors, register, onSubmit: handleSubmit(onSingIn), loading }
+  const onSingIn = (data: TAuthForm) => trigger(data)
+
+  return { errors, register, onSubmit: handleSubmit(onSingIn), loading: isMutating }
 }

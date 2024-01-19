@@ -7,10 +7,10 @@ type Result =
       error: string
     }
 
-export const signIn = async (data: TAuthForm): Promise<Result> => {
-  const res = await fetch('/api/login', {
+export const signIn = async (url: string, { arg }: { arg: TAuthForm }): Promise<Result> => {
+  const res = await fetch(url, {
     method: 'POST',
-    body: JSON.stringify(data),
+    body: JSON.stringify(arg),
   })
 
   return res.json()
